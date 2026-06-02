@@ -3,6 +3,9 @@ async function loadLibrary() {
     const librarySearch = document.getElementById('librarySearch');
     let curriculumData = null;
 
+    // Track library visit to unlock milestone badge!
+    localStorage.setItem('badge-library-visited', 'true');
+
     try {
         const response = await fetch('data/curriculum/map.json');
         curriculumData = await response.json();
