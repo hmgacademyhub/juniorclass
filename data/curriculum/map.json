@@ -9,26 +9,46 @@
             "term1": {
               "name": "First Term",
               "topics": [
-                {"id": "jss1-math-t1-1", "title": "Number Bases", "description": "Binary, Decimal, and Octal systems; conversion and operations."},
-                {"id": "jss1-math-t1-2", "title": "Fractions & Decimals", "description": "Rational numbers, mixed fractions, and decimal conversions."},
-                {"id": "jss1-math-t1-3", "title": "Factors, Multiples, LCM & HCF", "description": "Prime factorization and finding common divisors/multiples."},
-                {"id": "jss1-math-t1-4", "title": "Integers", "description": "Directed numbers, absolute values, and arithmetic on the number line."}
+                {
+                  "id": "jss1-math-t1-1",
+                  "title": "Number Bases",
+                  "description": "Binary, Decimal, and Octal systems; conversion and operations."
+                },
+                {
+                  "id": "jss1-math-t1-2",
+                  "title": "Fractions & Decimals",
+                  "description": "Rational numbers, mixed fractions, and decimal conversions."
+                }
               ]
             },
             "term2": {
               "name": "Second Term",
               "topics": [
-                {"id": "jss1-math-t2-1", "title": "Algebraic Expressions", "description": "Simplifying expressions, constants, and variables."},
-                {"id": "jss1-math-t2-2", "title": "Linear Equations", "description": "Solving for x in one and two-step equations."},
-                {"id": "jss1-math-t2-3", "title": "Ratios & Proportions", "description": "Sharing quantities and solving proportional problems."}
+                {
+                  "id": "jss1-math-t2-1",
+                  "title": "Algebraic Expressions",
+                  "description": "Simplifying expressions, constants, variables, and coefficients."
+                },
+                {
+                  "id": "jss1-math-t2-2",
+                  "title": "Linear Equations",
+                  "description": "Solving single-variable equations using algebraic rules."
+                }
               ]
             },
             "term3": {
               "name": "Third Term",
               "topics": [
-                {"id": "jss1-math-t3-1", "title": "Plane Geometry", "description": "Angles, triangles, and properties of polygons."},
-                {"id": "jss1-math-t3-2", "title": "Area & Perimeter", "description": "Calculation of boundaries and surface areas for 2D shapes."},
-                {"id": "jss1-math-t3-3", "title": "Introduction to Statistics", "description": "Frequency tables, mean, median, and mode."}
+                {
+                  "id": "jss1-math-t3-1",
+                  "title": "Plane Geometry",
+                  "description": "Angles, straight lines, triangles, and intersecting lines."
+                },
+                {
+                  "id": "jss1-math-t3-2",
+                  "title": "Area & Perimeter",
+                  "description": "Boundary length and surface coverage for standard 2D shapes."
+                }
               ]
             }
           }
@@ -39,23 +59,46 @@
             "term1": {
               "name": "First Term",
               "topics": [
-                {"id": "jss1-cs-t1-1", "title": "Foundations of Computing", "description": "The IPO cycle, history, and the 5 generations of computers."},
-                {"id": "jss1-cs-t1-2", "title": "Computer Hardware", "description": "Detailed analysis of Input, Output, Processing, and Storage devices."},
-                {"id": "jss1-cs-t1-3", "title": "Computer Software", "description": "System vs Application software; Operating Systems."}
+                {
+                  "id": "jss1-cs-t1-1",
+                  "title": "Foundations of Computing",
+                  "description": "The IPO cycle, history, and the 5 generations of computers."
+                },
+                {
+                  "id": "jss1-cs-t1-2",
+                  "title": "Computer Hardware",
+                  "description": "Physical architecture, peripherals, and system units."
+                }
               ]
             },
             "term2": {
               "name": "Second Term",
               "topics": [
-                {"id": "jss1-cs-t2-1", "title": "Digital Literacy", "description": "Operating OS, file management, and basic PC navigation."},
-                {"id": "jss1-cs-t2-2", "title": "Word Processing Mastery", "description": "Professional document creation and formatting."}
+                {
+                  "id": "jss1-cs-t2-1",
+                  "title": "Digital Literacy",
+                  "description": "OS navigation, boot concepts, and professional file organization."
+                },
+                {
+                  "id": "jss1-cs-t2-2",
+                  "title": "Word Processing Mastery",
+                  "description": "Document authoring, paragraph styling, and desktop publishing."
+                }
               ]
             },
             "term3": {
               "name": "Third Term",
               "topics": [
-                {"id": "jss1-cs-t3-1", "title": "ICT in Society", "description": "Impact of tech on health, education, and business."},
-                {"id": "jss1-cs-t3-2", "title": "Digital Ethics & Security", "description": "Privacy, safety, and the ethics of the digital world."}
+                {
+                  "id": "jss1-cs-t3-1",
+                  "title": "ICT in Society",
+                  "description": "Impact of telecommunication, e-learning, and remote commerce."
+                },
+                {
+                  "id": "jss1-cs-t3-2",
+                  "title": "Digital Ethics & Security",
+                  "description": "Cyber threats, online safety, phishing mitigation, and cryptography."
+                }
               ]
             }
           }
@@ -66,8 +109,46 @@
             "term1": {
               "name": "First Term",
               "topics": [
-                {"id": "jss1-sci-t1-1", "title": "Living & Non-Living Things", "description": "Classification of life, biological characteristics, and differences."},
-                {"id": "jss1-sci-t1-2", "title": "The Human Body", "description": "Organ systems, skeletal structure, and overall health."}
+                {
+                  "id": "jss1-sci-t1-1",
+                  "title": "Living & Non-Living Things",
+                  "description": "The MR NIGER D biological framework of life classification."
+                },
+                {
+                  "id": "jss1-sci-t1-2",
+                  "title": "The Human Body",
+                  "description": "Analysis of skeletal, respiratory, and circulatory systems."
+                }
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {
+                  "id": "jss1-sci-t2-1",
+                  "title": "Health & Disease",
+                  "description": "Infectious vs non-communicable pathogens, transmission, and vectors."
+                },
+                {
+                  "id": "jss1-sci-t2-2",
+                  "title": "Environmental Pollution",
+                  "description": "Degradation of air, water, and soil; chemical waste impacts."
+                }
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {
+                  "id": "jss1-sci-t3-1",
+                  "title": "Force & Energy",
+                  "description": "Mechanical forces, kinetic/potential energy transformations, and gravity."
+                },
+                {
+                  "id": "jss1-sci-t3-2",
+                  "title": "Space Science (Solar System)",
+                  "description": "Solenoid rotation, gravitational orbits, planets, and eclipses."
+                }
               ]
             }
           }
@@ -83,8 +164,46 @@
             "term1": {
               "name": "First Term",
               "topics": [
-                {"id": "jss2-math-t1-1", "title": "Indices & Powers", "description": "Laws of indices and simplification of exponential forms."},
-                {"id": "jss2-math-t1-2", "title": "Standard Form", "description": "Scientific notation for astronomical and microscopic values."}
+                {
+                  "id": "jss2-math-t1-1",
+                  "title": "Indices & Powers",
+                  "description": "Advanced algebraic indices, multiplication/division laws, and fractional bases."
+                },
+                {
+                  "id": "jss2-math-t1-2",
+                  "title": "Standard Form",
+                  "description": "Scientific notation format for representing extreme numerical data."
+                }
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {
+                  "id": "jss2-math-t2-1",
+                  "title": "Linear Inequalities",
+                  "description": "Solving and graphing inequality constraints on a 1D line."
+                },
+                {
+                  "id": "jss2-math-t2-2",
+                  "title": "Simple Interest & Percentages",
+                  "description": "Principal rates, maturity periods, and compound commercial math."
+                }
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {
+                  "id": "jss2-math-t3-1",
+                  "title": "Pythagoras' Theorem",
+                  "description": "Orthogonal triangles, hypotenuse proofs, and geometric applications."
+                },
+                {
+                  "id": "jss2-math-t3-2",
+                  "title": "Volume of Solid Prisms",
+                  "description": "Calculating cubic capacity of cylinders, cubes, and triangular prisms."
+                }
               ]
             }
           }
@@ -95,8 +214,96 @@
             "term1": {
               "name": "First Term",
               "topics": [
-                {"id": "jss2-cs-t1-1", "title": "Computational Thinking", "description": "Decomposition, Pattern Recognition, Abstraction, and Algorithms."},
-                {"id": "jss2-cs-t1-2", "title": "Logic & Flowcharts", "description": "Designing programs using pseudocode and flowcharts."}
+                {
+                  "id": "jss2-cs-t1-1",
+                  "title": "Computational Thinking",
+                  "description": "Abstractions, decomposition, pattern matchings, and code architectures."
+                },
+                {
+                  "id": "jss2-cs-t1-2",
+                  "title": "Logic & Flowcharts",
+                  "description": "Visualizing programs using standardized ANSI shape blocks."
+                }
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {
+                  "id": "jss2-cs-t2-1",
+                  "title": "Programming Variables",
+                  "description": "Declaring datatypes, string manipulations, and console input/output."
+                },
+                {
+                  "id": "jss2-cs-t2-2",
+                  "title": "Control Structures",
+                  "description": "Conditional branching (IF-ELSE) and iterative execution loops (FOR/WHILE)."
+                }
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {
+                  "id": "jss2-cs-t3-1",
+                  "title": "Computer Networks",
+                  "description": "Architectures of LAN, WAN, IP routing protocols, and the WWW network."
+                },
+                {
+                  "id": "jss2-cs-t3-2",
+                  "title": "Spreadsheet Engineering",
+                  "description": "Cell references, automated math formulas, SUM/AVERAGE, and visualization."
+                }
+              ]
+            }
+          }
+        },
+        "basic_science": {
+          "name": "Basic Science",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {
+                  "id": "jss2-sci-t1-1",
+                  "title": "Thermal Energy (Heat)",
+                  "description": "Kinetic heat transfer through solids, liquids, and gaseous vacuums."
+                },
+                {
+                  "id": "jss2-sci-t1-2",
+                  "title": "Kinetic Theory of Matter",
+                  "description": "Phase changes, molecular motion, and thermal expansions."
+                }
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {
+                  "id": "jss2-sci-t2-1",
+                  "title": "Animal Digestion",
+                  "description": "Metabolism, enzyme-driven breakdown, and waste excretion processes."
+                },
+                {
+                  "id": "jss2-sci-t2-2",
+                  "title": "Circulatory Machinery",
+                  "description": "Structure of mammalian hearts, arterial networks, and respiratory feedback."
+                }
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {
+                  "id": "jss2-sci-t3-1",
+                  "title": "Simple Machines",
+                  "description": "Levers, pulleys, inclined planes, mechanical advantage, and efficiency."
+                },
+                {
+                  "id": "jss2-sci-t3-2",
+                  "title": "Wave Mechanics (Light/Sound)",
+                  "description": "Propagation speeds, reflection, refraction, and optical properties."
+                }
               ]
             }
           }
@@ -112,8 +319,46 @@
             "term1": {
               "name": "First Term",
               "topics": [
-                {"id": "jss3-math-t1-1", "title": "Quadratic Equations", "description": "Solving via factorization, formula, and completing the square."},
-                {"id": "jss3-math-t1-2", "title": "Simultaneous Equations", "description": "Linear systems solving by elimination and substitution."}
+                {
+                  "id": "jss3-math-t1-1",
+                  "title": "Quadratic Equations",
+                  "description": "Factorizations, graphing, and formulas for solving degree-2 systems."
+                },
+                {
+                  "id": "jss3-math-t1-2",
+                  "title": "Simultaneous Equations",
+                  "description": "Eliminations, substitutions, and intersections of linear pairs."
+                }
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {
+                  "id": "jss3-math-t2-1",
+                  "title": "Trigonometric Ratios",
+                  "description": "Right-angled trigonometric ratios (Sine, Cosine, Tangent) and SOHCAHTOA."
+                },
+                {
+                  "id": "jss3-math-t2-2",
+                  "title": "Elevation & Depression",
+                  "description": "Using trignometry to calculate altitude heights and geometric distances."
+                }
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {
+                  "id": "jss3-math-t3-1",
+                  "title": "Spheres & Cones Geometry",
+                  "description": "Calculating surface area and volumetric capacities of curved geometry."
+                },
+                {
+                  "id": "jss3-math-t3-2",
+                  "title": "Probability Concepts",
+                  "description": "Calculating frequency outcomes, sample spaces, and mathematical chance."
+                }
               ]
             }
           }
@@ -124,8 +369,96 @@
             "term1": {
               "name": "First Term",
               "topics": [
-                {"id": "jss3-cs-t1-1", "title": "Intro to Data Science", "description": "The data lifecycle, analysis, and introduction to Machine Learning."},
-                {"id": "jss3-cs-t1-2", "title": "Web Technologies", "description": "HTTP, DNS, HTML5, and the structure of the modern web."}
+                {
+                  "id": "jss3-cs-t1-1",
+                  "title": "Intro to Data Science",
+                  "description": "Data pipelines, structured statistics, and introductory AI concepts."
+                },
+                {
+                  "id": "jss3-cs-t1-2",
+                  "title": "Web Technologies",
+                  "description": "Domain naming, HTTP endpoints, client-server models, and HTML5."
+                }
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {
+                  "id": "jss3-cs-t2-1",
+                  "title": "Database Management",
+                  "description": "Relational entities, primary keys, schemas, and basic structured queries."
+                },
+                {
+                  "id": "jss3-cs-t2-2",
+                  "title": "Software Development Life Cycle",
+                  "description": "Software planning, code execution, automated tests, and deployment models."
+                }
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {
+                  "id": "jss3-cs-t3-1",
+                  "title": "Cybersecurity and Firewalls",
+                  "description": "Network defenses, encryption keys, and digital infrastructure protection."
+                },
+                {
+                  "id": "jss3-cs-t3-2",
+                  "title": "Emerging Technologies",
+                  "description": "Artificial Intelligence models, Robotic mechanics, and cloud-scale grids."
+                }
+              ]
+            }
+          }
+        },
+        "basic_science": {
+          "name": "Basic Science",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {
+                  "id": "jss3-sci-t1-1",
+                  "title": "Radioactivity & Atoms",
+                  "description": "Nuclear isotopes, atomic shell layers, subatomic particles, and decay."
+                },
+                {
+                  "id": "jss3-sci-t1-2",
+                  "title": "Chemical Bonding",
+                  "description": "Valency shells, ionic electrovalency, and molecular covalent bonds."
+                }
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {
+                  "id": "jss3-sci-t2-1",
+                  "title": "Human Genetics & Heredity",
+                  "description": "Chromosomes, DNA, dominant/recessive genes, genotypes, and phenotypes."
+                },
+                {
+                  "id": "jss3-sci-t2-2",
+                  "title": "Earth Resources (Crude Oil)",
+                  "description": "Petroleum formations, fractional distillations, and mineral ore extraction."
+                }
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {
+                  "id": "jss3-sci-t3-1",
+                  "title": "Electricity & Magnetism",
+                  "description": "Electromotive currents, parallel circuits, Ohm's law, and solenoids."
+                },
+                {
+                  "id": "jss3-sci-t3-2",
+                  "title": "Environmental Conservation",
+                  "description": "Ecosystem protection, resource recycling, and sustainable environmental control."
+                }
               ]
             }
           }
