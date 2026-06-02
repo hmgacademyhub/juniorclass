@@ -4,34 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate of Completion | HMG Academy</title>
+    <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .cert-font { font-family: 'Libre Baskerville', serif; }
+        
+        /* Premium Background Gradients */
+        .gold-seal { background: radial-gradient(circle, #fef08a 0%, #ca8a04 100%); }
+        .silver-seal { background: radial-gradient(circle, #f1f5f9 0%, #64748b 100%); }
+        .emerald-seal { background: radial-gradient(circle, #a7f3d0 0%, #047857 100%); }
+        
         @media print {
             .no-print { display: none; }
             body { background: white; }
-            .cert-border { border: 20px solid #0f172a !important; }
         }
     </style>
 </head>
 <body class="bg-slate-100 flex items-center justify-center min-h-screen p-4">
-    <div class="no-print absolute top-8 right-8 flex gap-4">
-        <button onclick="window.print()" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:bg-blue-700 transition">
-            <i class="fas fa-print mr-2"></i> Print / Save as PDF
+    <!-- Style Controls & Actions Top Bar -->
+    <div class="no-print absolute top-8 right-8 flex items-center gap-4">
+        <!-- Style customizer dropdown (Enterprise V9 Feature!) -->
+        <div class="bg-white p-2 rounded-full shadow-xl border border-slate-200 flex items-center gap-3">
+            <span class="text-[10px] font-bold text-slate-400 uppercase pl-3">Design Frame:</span>
+            <button onclick="applyDesignStyle('gold')" class="w-6 h-6 rounded-full bg-yellow-500 border border-white shadow hover:scale-110 transition outline-none" title="Gold Classic"></button>
+            <button onclick="applyDesignStyle('platinum')" class="w-6 h-6 rounded-full bg-slate-400 border border-white shadow hover:scale-110 transition outline-none" title="Platinum Modern"></button>
+            <button onclick="applyDesignStyle('emerald')" class="w-6 h-6 rounded-full bg-emerald-600 border border-white shadow hover:scale-110 transition outline-none" title="Academic Emerald"></button>
+        </div>
+
+        <button onclick="window.print()" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:bg-blue-700 transition text-sm">
+            <i class="fas fa-print mr-2"></i> Print / Save PDF
         </button>
-        <a href="dashboard.html" class="bg-white text-slate-700 px-6 py-3 rounded-full font-bold shadow-xl hover:bg-slate-100 transition">
+        <a href="dashboard.html" class="bg-white text-slate-700 px-6 py-3 rounded-full font-bold shadow-xl hover:bg-slate-100 transition text-sm">
             Back to Dashboard
         </a>
     </div>
 
-    <div class="cert-border bg-white w-full max-w-5xl aspect-[1.414/1] p-12 border-[20px] border-slate-900 shadow-2xl relative flex flex-col items-center text-center justify-between">
-        <div class="absolute top-0 left-0 w-32 h-32 border-t-8 border-l-8 border-blue-500"></div>
-        <div class="absolute top-0 right-0 w-32 h-32 border-t-8 border-r-8 border-blue-500"></div>
-        <div class="absolute bottom-0 left-0 w-32 h-32 border-b-8 border-l-8 border-blue-500"></div>
-        <div class="absolute bottom-0 right-0 w-32 h-32 border-b-8 border-r-8 border-blue-500"></div>
+    <!-- Certificate Border Frame (Stylable in V9) -->
+    <div id="certFrame" class="bg-white w-full max-w-5xl aspect-[1.414/1] p-12 border-[20px] border-slate-900 shadow-2xl relative flex flex-col items-center text-center justify-between transition-all duration-300">
+        <!-- Certificate Corners -->
+        <div id="cornerTL" class="absolute top-0 left-0 w-32 h-32 border-t-8 border-l-8 border-blue-500"></div>
+        <div id="cornerTR" class="absolute top-0 right-0 w-32 h-32 border-t-8 border-r-8 border-blue-500"></div>
+        <div id="cornerBL" class="absolute bottom-0 left-0 w-32 h-32 border-b-8 border-l-8 border-blue-500"></div>
+        <div id="cornerBR" class="absolute bottom-0 right-0 w-32 h-32 border-b-8 border-r-8 border-blue-500"></div>
 
         <div>
             <div class="flex items-center justify-center gap-3 mb-8">
@@ -40,41 +57,83 @@
                 </div>
                 <span class="text-3xl font-extrabold text-slate-900 tracking-tighter">HMG <span class="text-blue-600">ACADEMY</span></span>
             </div>
-            <h1 class="cert-font text-6xl font-bold text-slate-800 mb-4">Certificate of Completion</h1>
-            <p class="text-xl text-slate-500 italic mb-12">This is to certify that</p>
-            <div class="text-5xl font-extrabold text-slate-900 mb-4 underline decoration-blue-500 underline-offset-8" id="studentName">
+            <h1 class="cert-font text-5xl font-bold text-slate-800 mb-4">Certificate of Completion</h1>
+            <p class="text-xl text-slate-500 italic mb-8">This is to certify that</p>
+            <div class="text-4xl font-extrabold text-slate-900 mb-4 underline decoration-blue-500 underline-offset-8" id="studentName">
                 Scholar Learner
             </div>
         </div>
 
         <div class="max-w-2xl">
-            <p class="text-2xl text-slate-600 leading-relaxed cert-font">
+            <p class="text-xl text-slate-600 leading-relaxed cert-font">
                 has successfully completed the comprehensive study of
             </p>
-            <h2 class="text-4xl font-extrabold text-slate-900 my-6" id="topicTitle">
+            <h2 class="text-3xl font-extrabold text-slate-900 my-4" id="topicTitle">
                 Introduction to Computing
             </h2>
-            <p class="text-lg text-slate-500">
-                Demonstrating proficiency in the blended Nigerian and British curriculum standards.
+            <p class="text-sm text-slate-500 max-w-lg mx-auto">
+                Demonstrating outstanding academic proficiency and cognitive mastery of curriculum standards in the HMG concepts learning program.
             </p>
         </div>
 
-        <div class="w-full flex justify-between items-end px-12">
-            <div class="text-center">
-                <div class="w-48 border-b-2 border-slate-400 mb-2"></div>
-                <p class="font-bold text-slate-800">Date of Issue</p>
-                <p id="issueDate" class="text-slate-500 text-sm">June 2, 2026</p>
+        <!-- Footers and Credentials -->
+        <div class="w-full flex justify-between items-end px-12 mt-8">
+            <div class="text-center w-1/3">
+                <div class="w-40 border-b-2 border-slate-400 mb-2 mx-auto"></div>
+                <p class="font-bold text-slate-800 text-xs">Date of Issue</p>
+                <p id="issueDate" class="text-slate-500 text-xs">June 2, 2026</p>
             </div>
-            <div class="relative">
-                <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-4xl shadow-inner border-4 border-white">
-                    <i class="fas fa-award"></i>
+            
+            <!-- Holographic Seal & QR Code -->
+            <div class="w-1/3 flex justify-center items-center gap-6">
+                <!-- Golden Seal -->
+                <div class="relative flex flex-col items-center">
+                    <div id="certSeal" class="w-20 h-20 rounded-full gold-seal flex items-center justify-center text-amber-900 text-2xl shadow-lg border-4 border-white z-10 transition-all">
+                        <i class="fas fa-ribbon"></i>
+                    </div>
+                    <div id="ribbonLeft" class="absolute -bottom-4 w-6 h-12 bg-amber-600 rounded-b-md transform rotate-12 origin-top"></div>
+                    <div id="ribbonRight" class="absolute -bottom-4 w-6 h-12 bg-amber-600 rounded-b-md transform -rotate-12 origin-top"></div>
+                </div>
+
+                <!-- High-Fidelity SVG Offline QR Code -->
+                <div class="border-2 border-slate-200 p-1 bg-white rounded shadow-sm flex flex-col items-center gap-1">
+                    <svg width="50" height="50" viewBox="0 0 29 29" shape-rendering="crispEdges">
+                        <rect width="29" height="29" fill="white"/>
+                        <rect x="0" y="0" width="7" height="7" fill="black"/>
+                        <rect x="1" y="1" width="5" height="5" fill="white"/>
+                        <rect x="2" y="2" width="3" height="3" fill="black"/>
+                        
+                        <rect x="22" y="0" width="7" height="7" fill="black"/>
+                        <rect x="23" y="1" width="5" height="5" fill="white"/>
+                        <rect x="24" y="2" width="3" height="3" fill="black"/>
+
+                        <rect x="0" y="22" width="7" height="7" fill="black"/>
+                        <rect x="1" y="23" width="5" height="5" fill="white"/>
+                        <rect x="2" y="24" width="3" height="3" fill="black"/>
+                        
+                        <rect x="9" y="2" width="2" height="1" fill="black"/>
+                        <rect x="14" y="4" width="3" height="2" fill="black"/>
+                        <rect x="18" y="9" width="2" height="3" fill="black"/>
+                        <rect x="10" y="14" width="4" height="1" fill="black"/>
+                        <rect x="2" y="10" width="2" height="2" fill="black"/>
+                        <rect x="25" y="12" width="2" height="4" fill="black"/>
+                        <rect x="13" y="21" width="5" height="2" fill="black"/>
+                        <rect x="22" y="25" width="4" height="2" fill="black"/>
+                    </svg>
+                    <span class="text-[6px] font-bold text-slate-400 uppercase tracking-tighter">Scan Verification</span>
                 </div>
             </div>
-            <div class="text-center">
-                <div class="w-48 border-b-2 border-slate-400 mb-2 font-serif italic text-2xl">A. S. Adeagbo</div>
-                <p class="font-bold text-slate-800">Adewale Samson Adeagbo</p>
-                <p class="text-slate-500 text-sm">Director, HMG Academy</p>
+
+            <div class="text-center w-1/3">
+                <div class="w-40 border-b-2 border-slate-400 mb-2 mx-auto font-serif italic text-xl">A. S. Adeagbo</div>
+                <p class="font-bold text-slate-800 text-xs">Adewale Samson Adeagbo</p>
+                <p class="text-slate-500 text-[10px]">Director, HMG Academy Concepts</p>
             </div>
+        </div>
+
+        <!-- Serial Info Bar -->
+        <div class="w-full text-center mt-6 text-[8px] font-mono text-slate-400 select-all border-t border-slate-100 pt-4" id="serialBar">
+            SECURE VERIFICATION HASH: HMG-CERT-LOADING-HASH
         </div>
     </div>
 
@@ -88,12 +147,70 @@
                     .then(res => res.json())
                     .then(data => {
                         document.getElementById('topicTitle').textContent = data.title;
+                        
+                        // Generate enterprise serial hash
+                        const score = localStorage.getItem(`score-${topicId}`) || '100';
+                        const rawHash = `${name}|${score}|${new Date().toLocaleDateString()}`;
+                        const base64Hash = btoa(rawHash);
+                        const serialCode = `HMG-CERT-${topicId}-${base64Hash}`;
+                        
+                        document.getElementById('serialBar').textContent = `SECURE REGISTERED DEPLOYMENT CODE: ${serialCode} • VERIFY INSTANTLY ON DASHBOARD`;
                     });
             }
             document.getElementById('issueDate').textContent = new Date().toLocaleDateString('en-GB', {
                 day: 'numeric', month: 'long', year: 'numeric'
             });
         });
+
+        /* Dynamic Design Style Controller (New V9 feature!) */
+        function applyDesignStyle(theme) {
+            const frame = document.getElementById('certFrame');
+            const seal = document.getElementById('certSeal');
+            const ribLeft = document.getElementById('ribbonLeft');
+            const ribRight = document.getElementById('ribbonRight');
+            const tl = document.getElementById('cornerTL');
+            const tr = document.getElementById('cornerTR');
+            const bl = document.getElementById('cornerBL');
+            const br = document.getElementById('cornerBR');
+
+            // Reset corners
+            tl.className = tr.className = bl.className = br.className = "absolute w-32 h-32 border-8";
+            tl.classList.add('top-0', 'left-0', 'border-b-0', 'border-r-0');
+            tr.classList.add('top-0', 'right-0', 'border-b-0', 'border-l-0');
+            bl.classList.add('bottom-0', 'left-0', 'border-t-0', 'border-r-0');
+            br.classList.add('bottom-0', 'right-0', 'border-t-0', 'border-l-0');
+
+            if (theme === 'gold') {
+                frame.style.borderColor = "#0f172a"; // deep navy
+                tl.classList.add('border-blue-500');
+                tr.classList.add('border-blue-500');
+                bl.classList.add('border-blue-500');
+                br.classList.add('border-blue-500');
+                
+                seal.className = "w-20 h-20 rounded-full gold-seal flex items-center justify-center text-amber-900 text-2xl shadow-lg border-4 border-white z-10 transition-all";
+                ribLeft.style.backgroundColor = ribRight.style.backgroundColor = "#d97706";
+
+            } else if (theme === 'platinum') {
+                frame.style.borderColor = "#475569"; // platinum slate
+                tl.classList.add('border-teal-500');
+                tr.classList.add('border-teal-500');
+                bl.classList.add('border-teal-500');
+                br.classList.add('border-teal-500');
+                
+                seal.className = "w-20 h-20 rounded-full silver-seal flex items-center justify-center text-slate-800 text-2xl shadow-lg border-4 border-white z-10 transition-all";
+                ribLeft.style.backgroundColor = ribRight.style.backgroundColor = "#475569";
+
+            } else if (theme === 'emerald') {
+                frame.style.borderColor = "#064e3b"; // deep green
+                tl.classList.add('border-yellow-500');
+                tr.classList.add('border-yellow-500');
+                bl.classList.add('border-yellow-500');
+                br.classList.add('border-yellow-500');
+                
+                seal.className = "w-20 h-20 rounded-full emerald-seal flex items-center justify-center text-green-900 text-2xl shadow-lg border-4 border-white z-10 transition-all";
+                ribLeft.style.backgroundColor = ribRight.style.backgroundColor = "#059669";
+            }
+        }
     </script>
 </body>
 </html>

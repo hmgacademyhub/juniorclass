@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Planner | HMG Academy</title>
+    <title>Academic Study Planner | HMG Academy</title>
+    <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .brand-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
-    </style>
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+        .calendar-day { aspect-ratio: 1; border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between; padding: 6px; font-weight: bold; font-size: 11px; transition: all 0.2s; }
+        .day-active { background-color: #f8fafc; border: 1px solid #e2e8f0; cursor: pointer; }
+        .day-active:hover { background-color: #eff6ff; border-color: #3b82f6; }
+        .day-has-task { background-color: #e0f2fe; border-color: #7dd3fc; color: #0369a1; }
+        .day-has-task:hover { background-color: #bae6fd; }
+        .day-empty { opacity: 0.2; }
+    </svg>
 </head>
 <body class="bg-slate-50 text-slate-900">
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
@@ -22,33 +30,121 @@
                     </div>
                     <span class="text-xl font-bold text-slate-900">HMG <span class="text-blue-600">ACADEMY</span></span>
                 </div>
-                <a href="dashboard.html" class="text-blue-600 font-bold hover:underline flex items-center gap-2">
+                <a href="dashboard.html" class="text-blue-600 font-bold hover:underline flex items-center gap-2 text-sm">
                     <i class="fas fa-arrow-left"></i> Back to Dashboard
                 </a>
             </div>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-4 py-12">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Academic Study Planner</h1>
-            <p class="text-slate-500">Organize your learning and stay disciplined.</p>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
+        <!-- Sidebar: Task List Adder -->
+        <aside class="w-full lg:w-2/5 space-y-6">
+            <div class="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-200">
+                <h3 class="font-extrabold text-xl mb-4 text-slate-800 flex items-center gap-2">
+                    <i class="fas fa-calendar-plus text-blue-600"></i> Schedule Study Task
+                </h3>
+                <p class="text-xs text-slate-400 mb-6">Select a curriculum topic to schedule directly, or type a custom task below.</p>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-2">1. Select Class Syllabus Topic</label>
+                        <select id="curriculumTopicSelect" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none transition text-xs font-semibold">
+                            <option value="">Choose Topic...</option>
+                            <!-- 54 Topics will populate here -->
+                        </select>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                            <div class="w-full border-t border-slate-200"></div>
+                        </div>
+                        <div class="relative flex justify-center text-xs uppercase font-bold">
+                            <span class="bg-white px-2 text-slate-400">Or Custom Task</span>
+                        </div>
+                    </div>
 
-        <div class="bg-white p-8 rounded-[3rem] shadow-xl border border-slate-200">
-            <div class="flex flex-col md:flex-row gap-6 mb-12">
-                <input type="text" id="taskInput" placeholder="What topic will you master today?" class="flex-grow p-4 rounded-2xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none font-medium text-lg">
-                <button onclick="addTask()" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-600 transition shadow-lg">
-                    Add to Plan <i class="fas fa-plus ml-2"></i>
-                </button>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-2">2. Custom Task Description</label>
+                        <input type="text" id="taskInput" placeholder="Enter custom study plan..." class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none font-medium text-xs">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">3. Calendar Date</label>
+                            <input type="date" id="taskDate" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none font-bold text-xs text-slate-700">
+                        </div>
+                        <div class="flex items-end">
+                            <button onclick="addTask()" class="w-full bg-slate-900 text-white p-3 rounded-xl font-bold hover:bg-blue-600 transition shadow text-xs">
+                                Schedule <i class="fas fa-plus ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div id="plannerList" class="space-y-4">
-                <!-- Tasks populated by JS -->
+            <!-- Task List View -->
+            <div class="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-200">
+                <h3 class="font-extrabold text-lg mb-4 text-slate-800 flex items-center gap-2">
+                    <i class="fas fa-list-check text-blue-600"></i> Task Backlog
+                </h3>
+                <div id="plannerList" class="space-y-3 max-h-64 overflow-y-auto pr-1">
+                    <!-- Tasks populated by JS -->
+                </div>
             </div>
-        </div>
+        </aside>
+
+        <!-- Main Panel: Visual Month Calendar Grid -->
+        <main class="w-full lg:w-3/5 space-y-6">
+            <div class="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-200">
+                <!-- Calendar Header -->
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h2 class="text-2xl font-extrabold text-slate-800" id="calendarMonthLabel">June 2026</h2>
+                        <span class="text-xs text-slate-400 uppercase font-extrabold">HMG Academic Calendar</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="changeMonth(-1)" class="bg-slate-100 hover:bg-slate-200 p-2.5 rounded-xl transition text-slate-700"><i class="fas fa-chevron-left"></i></button>
+                        <button onclick="changeMonth(1)" class="bg-slate-100 hover:bg-slate-200 p-2.5 rounded-xl transition text-slate-700"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Calendar Weekday Headers -->
+                <div class="grid grid-cols-7 gap-1 text-center mb-2 text-[10px] font-extrabold text-slate-400 uppercase tracking-widest">
+                    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                </div>
+
+                <!-- Days Grid -->
+                <div id="calendarDaysGrid" class="calendar-grid">
+                    <!-- Programmatically loaded days -->
+                </div>
+            </div>
+
+            <!-- Day Details Card -->
+            <div id="dayDetailsCard" class="hidden bg-blue-50 border border-blue-100 p-6 rounded-3xl">
+                <h4 class="font-extrabold text-blue-800 mb-2 flex items-center gap-2">
+                    <i class="fas fa-calendar-day"></i> Tasks for <span id="detailsDateLabel">June 2, 2026</span>
+                </h4>
+                <div id="dayTasksContainer" class="space-y-2 text-xs font-semibold text-blue-700 leading-relaxed">
+                    <!-- Day tasks lists -->
+                </div>
+            </div>
+        </main>
     </div>
 
+    <footer class="py-12 text-center text-slate-400 text-xs">
+        &copy; 2026 HMG Academy. Part of HMG Concepts Ecosystem.
+    </footer>
+
     <script src="assets/js/planner.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('HMG Learnhub PWA Registered!', reg.scope))
+                    .catch(err => console.log('Service Worker Registration Failed', err));
+            });
+        }
+    </script>
 </body>
 </html>

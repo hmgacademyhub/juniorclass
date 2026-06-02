@@ -4,16 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson | HMG Academy</title>
+    <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s, color 0.3s; }
         .brand-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
         .accent-gradient { background: linear-gradient(90deg, #3b82f6, #2dd4bf); }
+        
+        /* Dyslexic Friendly Styling */
+        .dyslexic {
+            font-family: 'Comic Sans MS', cursive, sans-serif !important;
+            letter-spacing: 0.15em !important;
+            word-spacing: 0.3em !important;
+            line-height: 2.0 !important;
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .dark-mode .bg-white {
+            background-color: #1e293b !important;
+            color: #f8fafc !important;
+            border-color: #334155 !important;
+        }
+        .dark-mode .text-slate-800, 
+        .dark-mode .text-slate-900,
+        .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+            color: #f1f5f9 !important;
+        }
+        .dark-mode .text-slate-500, .dark-mode .text-slate-600 {
+            color: #94a3b8 !important;
+        }
+        .dark-mode .border-slate-200, .dark-mode .border-slate-100 {
+            border-color: #334155 !important;
+        }
+        .dark-mode nav {
+            background-color: rgba(30, 41, 59, 0.8) !important;
+            border-color: #334155 !important;
+        }
+        .dark-mode textarea, .dark-mode input {
+            background-color: #0f172a !important;
+            color: #f8fafc !important;
+            border-color: #475569 !important;
+        }
+        
+        /* Flip animation */
+        .flip-container {
+            perspective: 1000px;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
+    <!-- Navigation -->
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -21,7 +67,7 @@
                     <div class="brand-gradient p-2 rounded-lg text-white">
                         <i class="fas fa-graduation-cap text-xl"></i>
                     </div>
-                    <span class="text-xl font-bold text-slate-900">HMG <span class="text-blue-600">ACADEMY</span></span>
+                    <span class="text-xl font-bold">HMG <span class="text-blue-600">ACADEMY</span></span>
                 </div>
                 <a href="dashboard.html" class="text-blue-600 font-bold hover:underline flex items-center gap-2">
                     <i class="fas fa-arrow-left"></i> Back to Dashboard
@@ -31,12 +77,52 @@
     </nav>
 
     <div class="max-w-4xl mx-auto px-4 py-12">
+        <!-- Accessibility Panel -->
+        <div class="no-print bg-white p-4 rounded-3xl shadow-sm border border-slate-200 mb-8 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center gap-2 text-slate-700 font-bold">
+                <i class="fas fa-universal-access text-blue-600 text-lg"></i>
+                <span class="text-sm">Accessibility Toolset</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <!-- Text To Speech Controls (Expanded V7) -->
+                <div class="flex items-center gap-1.5 bg-slate-50 p-1.5 rounded-2xl border border-slate-100">
+                    <button id="ttsBtn" onclick="toggleTTS()" class="bg-white hover:bg-blue-100 text-slate-700 hover:text-blue-600 px-3 py-1.5 rounded-xl transition font-bold text-xs flex items-center gap-1">
+                        <i class="fas fa-volume-up"></i> Read
+                    </button>
+                    <!-- Speed Select -->
+                    <select id="ttsSpeed" class="bg-white text-slate-600 px-1.5 py-1.5 rounded-lg text-[10px] font-bold outline-none border border-slate-200">
+                        <option value="0.75">0.75x</option>
+                        <option value="1.0" selected>1.0x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2.0">2.0x</option>
+                    </select>
+                    <!-- Voice Select -->
+                    <select id="ttsVoice" class="bg-white text-slate-600 px-1.5 py-1.5 rounded-lg text-[10px] font-bold outline-none border border-slate-200 max-w-[80px] truncate">
+                        <option value="">Default Voice</option>
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+                <!-- Font Size -->
+                <button onclick="changeFontSize(-1)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 w-8 h-8 rounded-xl transition font-bold text-xs">A-</button>
+                <button onclick="changeFontSize(1)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 w-8 h-8 rounded-xl transition font-bold text-xs">A+</button>
+                <!-- Dyslexic Font -->
+                <button id="dysBtn" onclick="toggleDyslexicFont()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-2 rounded-xl transition font-bold text-xs">Dyslexic Font</button>
+                <!-- Dark Mode -->
+                <button id="darkBtn" onclick="toggleDarkMode()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 w-8 h-8 rounded-xl transition flex items-center justify-center text-xs">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
         <div id="lessonHeader" class="mb-12 text-center">
             <div id="breadcrumb" class="text-xs text-slate-400 mb-4 uppercase font-extrabold tracking-widest"></div>
             <h1 id="lessonTitle" class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Loading Lesson...</h1>
-            <div class="flex justify-center gap-4">
-                <button id="markCompleteBtn" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg hover:scale-105">
-                    <i class="fas fa-check-circle mr-2"></i> Mark as Completed
+            <div class="flex justify-center flex-wrap gap-4">
+                <button id="markCompleteBtn" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg hover:scale-105 flex items-center gap-2">
+                    <i class="fas fa-check-circle"></i> Mark as Completed
+                </button>
+                <button id="addToPlannerBtn" onclick="addThisLessonToPlanner()" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition shadow-lg hover:scale-105 flex items-center gap-2">
+                    <i class="fas fa-calendar-plus"></i> Schedule in Planner
                 </button>
             </div>
         </div>
@@ -56,13 +142,157 @@
                 <div id="vocabGrid" class="grid sm:grid-cols-2 gap-4"></div>
             </div>
 
-            <div id="lessonContent" class="bg-white p-8 md:p-16 rounded-[3rem] shadow-sm border border-slate-200 prose prose-slate max-w-none"></div>
+            <!-- Active Recall Flashcards Section -->
+            <div id="flashcardSection" class="hidden bg-white p-8 rounded-3xl border border-slate-200 shadow-sm text-center">
+                <h3 class="text-slate-800 font-extrabold text-xl mb-6 flex items-center justify-center gap-2">
+                    <i class="fas fa-clone text-blue-600"></i> Active Recall Flashcards
+                </h3>
+                <div class="flex flex-col items-center gap-6">
+                    <div id="flashcardBox" onclick="flipFlashcard()" class="w-full max-w-md aspect-[1.6] bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl shadow-xl flex flex-col justify-center items-center cursor-pointer relative overflow-hidden transition-all duration-300 transform hover:scale-[1.02]">
+                        <span id="cardLabel" class="absolute top-4 left-6 text-[10px] font-bold uppercase tracking-widest opacity-60">Vocabulary Card (Front)</span>
+                        <div id="cardContent" class="text-xl md:text-2xl font-extrabold select-none leading-relaxed">Click to load card</div>
+                        <span class="absolute bottom-4 text-[10px] opacity-60 flex items-center gap-1"><i class="fas fa-sync-alt"></i> Click card to flip</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button onclick="prevFlashcard()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 w-10 h-10 rounded-full transition flex items-center justify-center shadow-sm"><i class="fas fa-chevron-left"></i></button>
+                        <span id="flashcardIndex" class="text-sm font-extrabold text-slate-500">1 / 4</span>
+                        <button onclick="nextFlashcard()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 w-10 h-10 rounded-full transition flex items-center justify-center shadow-sm"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Interactive Study Notebook -->
+            <div class="no-print bg-white p-8 rounded-[3rem] shadow-sm border border-slate-200">
+                <h3 class="text-slate-800 font-extrabold text-xl mb-4 flex items-center justify-between">
+                    <span class="flex items-center gap-2"><i class="fas fa-edit text-blue-600"></i> Personal Study Notebook</span>
+                    <button onclick="downloadStudyNotes()" class="bg-slate-100 hover:bg-blue-100 text-slate-700 hover:text-blue-600 px-4 py-2 rounded-xl transition text-xs font-bold flex items-center gap-1.5"><i class="fas fa-download"></i> Export Notes</button>
+                </h3>
+                <textarea id="notebookArea" rows="4" placeholder="Type your notes here while you study. They are automatically saved to this topic for future revision!" class="w-full p-4 rounded-2xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none font-medium text-slate-700 transition leading-relaxed"></textarea>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="text-[10px] text-slate-400 font-semibold italic"><i class="fas fa-cloud-upload-alt text-green-500 mr-1"></i> Autosaved locally</span>
+                    <button onclick="clearStudyNotes()" class="text-red-500 hover:text-red-600 text-xs font-bold transition"><i class="fas fa-trash-alt mr-1"></i> Clear Notes</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Interactive Learning Sandbox -->
+            <div id="sandboxSection" class="hidden bg-slate-900 text-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-slate-800">
+                <h3 class="text-transparent bg-clip-text accent-gradient font-extrabold text-2xl mb-2 flex items-center gap-2">
+                    <i class="fas fa-laptop-code"></i> Active Learning Sandbox
+                </h3>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">Unlock experimental learning with this interactive, zero-API simulator calibrated specifically for this topic's concepts.</p>
+                
+                <!-- CS Sandbox -->
+                <div id="csSandbox" class="hidden space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-750">
+                            <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Decimal (Base 10) Value</label>
+                            <input type="number" id="decSandboxInput" value="13" oninput="runCsSandbox()" class="w-full p-3 rounded-xl bg-slate-900 text-white border border-slate-700 outline-none focus:border-blue-500 font-bold">
+                        </div>
+                        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-750 flex flex-col justify-between">
+                            <span class="block text-xs font-bold text-slate-400 uppercase mb-2">Binary (Base 2) System</span>
+                            <span id="binSandboxOutput" class="text-3xl font-mono font-extrabold text-teal-400">1101</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-2xl border border-slate-750">
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-3">Live IPO Cycle Simulation</span>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-slate-900 p-4 rounded-xl border border-blue-500/30">
+                                <span class="block text-[10px] text-blue-400 font-bold uppercase mb-1">Input Data</span>
+                                <span id="ipoInputVal" class="font-mono text-base font-extrabold">13</span>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-teal-500/30 flex flex-col justify-center">
+                                <span class="block text-[10px] text-teal-400 font-bold uppercase mb-1">Processing Logic</span>
+                                <span class="font-mono text-[10px] text-slate-400">Successive ÷ 2</span>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-green-500/30">
+                                <span class="block text-[10px] text-green-400 font-bold uppercase mb-1">Output Info</span>
+                                <span id="ipoOutputVal" class="font-mono text-base font-extrabold text-green-400">1101_2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mathematics Sandbox -->
+                <div id="mathSandbox" class="hidden space-y-6">
+                    <div class="bg-slate-800 p-6 rounded-2xl border border-slate-750">
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-4">Linear Equation Solver: ax + b = c</span>
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div>
+                                <label class="block text-[10px] text-slate-400 font-bold mb-1">Value of a</label>
+                                <input type="number" id="eqA" value="2" oninput="solveMathSandbox()" class="w-full p-2.5 rounded-lg bg-slate-900 text-white border border-slate-750 text-center outline-none font-bold">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-slate-400 font-bold mb-1">Value of b</label>
+                                <input type="number" id="eqB" value="5" oninput="solveMathSandbox()" class="w-full p-2.5 rounded-lg bg-slate-900 text-white border border-slate-750 text-center outline-none font-bold">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-slate-400 font-bold mb-1">Value of c</label>
+                                <input type="number" id="eqC" value="15" oninput="solveMathSandbox()" class="w-full p-2.5 rounded-lg bg-slate-900 text-white border border-slate-750 text-center outline-none font-bold">
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+                            <span class="block text-xs font-bold text-slate-400 mb-3">Logical Step-by-Step Resolution:</span>
+                            <div class="space-y-3 text-sm font-semibold text-slate-300">
+                                <div class="flex justify-between"><span>Formulate Equation:</span> <span class="text-blue-400" id="mathEqDisp">2x + 5 = 15</span></div>
+                                <div class="flex justify-between"><span>Isolate Variable (Subtract b):</span> <span class="text-blue-400" id="mathEqStep2">2x = 10</span></div>
+                                <div class="flex justify-between"><span>Solve for x (Divide by a):</span> <span class="text-green-400 text-base" id="mathEqResult">x = 5</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Science Sandbox (Dual Lab Mode) -->
+                <div id="sciSandbox" class="hidden space-y-6">
+                    <!-- Biology Specimen Classifier -->
+                    <div id="bioLab" class="hidden bg-slate-800 p-6 rounded-2xl border border-slate-750 text-center">
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-4">Observation Lab: Specimen Classifier Game</span>
+                        <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 max-w-sm mx-auto mb-6 shadow-inner">
+                            <span class="text-xs text-slate-400 block mb-1">Observe the specimen below carefully:</span>
+                            <span id="sciSpecimen" class="text-4xl font-extrabold text-blue-400 block my-4">Dog 🐕</span>
+                            <div class="flex justify-center gap-4">
+                                <button onclick="guessSciSpecimen(true)" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-xl font-bold transition text-sm">Living Thing</button>
+                                <button onclick="guessSciSpecimen(false)" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-xl font-bold transition text-sm">Non-Living Thing</button>
+                            </div>
+                        </div>
+                        <div id="sciFeedback" class="text-sm italic font-semibold text-slate-300 min-h-[20px]">Choose a classification to test your scientific observations!</div>
+                    </div>
+
+                    <!-- Chemistry Bohr Atomic Model Simulator -->
+                    <div id="chemLab" class="hidden bg-slate-800 p-6 rounded-2xl border border-slate-750 text-center">
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-4">Interactive Bohr Atomic Model Simulator</span>
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-left space-y-3">
+                                <span class="block text-xs font-bold text-slate-400 uppercase mb-1">Select Chemical Element</span>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button onclick="renderBohrModel('H')" class="bg-slate-800 hover:bg-blue-600 px-3 py-2 rounded-lg font-bold text-xs transition">Hydrogen (H)</button>
+                                    <button onclick="renderBohrModel('He')" class="bg-slate-800 hover:bg-blue-600 px-3 py-2 rounded-lg font-bold text-xs transition">Helium (He)</button>
+                                    <button onclick="renderBohrModel('C')" class="bg-slate-800 hover:bg-blue-600 px-3 py-2 rounded-lg font-bold text-xs transition">Carbon (C)</button>
+                                    <button onclick="renderBohrModel('O')" class="bg-slate-800 hover:bg-blue-600 px-3 py-2 rounded-lg font-bold text-xs transition">Oxygen (O)</button>
+                                </div>
+                                <div class="border-t border-slate-800 pt-3 text-slate-300 text-[10px] space-y-1">
+                                    <div><strong>Protons (P):</strong> <span id="bohrP" class="text-teal-400">1</span></div>
+                                    <div><strong>Neutrons (N):</strong> <span id="bohrN" class="text-yellow-400">0</span></div>
+                                    <div><strong>Electrons (E):</strong> <span id="bohrE" class="text-blue-400">1</span></div>
+                                    <div><strong>Shells/Orbits:</strong> <span id="bohrShells" class="text-purple-400">1</span></div>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 flex justify-center items-center h-48" id="bohrSvgContainer">
+                                <!-- Dynamic Atomic Bohr Model SVG goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Lesson Content Block -->
+            <div id="lessonContent" class="bg-white p-8 md:p-16 rounded-[3rem] shadow-sm border border-slate-200 prose prose-slate max-w-none leading-relaxed text-lg"></div>
+
+            <!-- Final Mastery Quiz CTA -->
             <div id="assessmentSection" class="hidden">
                 <div class="brand-gradient text-white p-12 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
                     <div class="relative z-10">
-                        <h3 class="text-3xl font-extrabold mb-4">Knowledge Check</h3>
-                        <p class="opacity-80 mb-8 text-lg max-w-md mx-auto leading-relaxed">You've completed the reading! Now, prove your mastery with the topic assessment.</p>
+                        <h3 class="text-3xl font-extrabold mb-4">Concept Verification Assesment</h3>
+                        <p class="opacity-80 mb-8 text-lg max-w-md mx-auto leading-relaxed">You've successfully covered the interactive textbook content! Complete the formal exam to earn your certified credentials.</p>
                         <a id="quizLink" href="quiz.html" class="bg-white text-slate-900 px-10 py-4 rounded-full font-extrabold text-lg hover:scale-105 transition inline-block shadow-xl">
                             Start Quiz <i class="fas fa-pencil-alt ml-2"></i>
                         </a>
@@ -77,5 +307,14 @@
     </footer>
 
     <script src="assets/js/lesson.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('HMG Learnhub PWA Registered!', reg.scope))
+                    .catch(err => console.log('Service Worker Registration Failed', err));
+            });
+        }
+    </script>
 </body>
 </html>
