@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | HMG Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .brand-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="brand-gradient p-2 rounded-lg text-white">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold text-slate-900">HMG <span class="text-blue-600">ACADEMY</span></span>
+                </div>
+                <a href="dashboard.html" class="text-blue-600 font-bold hover:underline flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i> Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Resource Library</h1>
+            <p class="text-slate-500">Quick access to all lessons across the ecosystem.</p>
+        </div>
+
+        <div class="relative mb-12 max-w-2xl mx-auto">
+            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input type="text" id="librarySearch" placeholder="Search all subjects..." class="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 bg-white shadow-sm focus:ring-2 focus:ring-blue-500 outline-none transition text-lg">
+        </div>
+
+        <div id="libraryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <script src="assets/js/library.js"></script>
+</body>
+</html>

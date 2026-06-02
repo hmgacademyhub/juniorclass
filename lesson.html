@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson | HMG Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .brand-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        .accent-gradient { background: linear-gradient(90deg, #3b82f6, #2dd4bf); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='dashboard.html'">
+                    <div class="brand-gradient p-2 rounded-lg text-white">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold text-slate-900">HMG <span class="text-blue-600">ACADEMY</span></span>
+                </div>
+                <a href="dashboard.html" class="text-blue-600 font-bold hover:underline flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i> Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-12">
+        <div id="lessonHeader" class="mb-12 text-center">
+            <div id="breadcrumb" class="text-xs text-slate-400 mb-4 uppercase font-extrabold tracking-widest"></div>
+            <h1 id="lessonTitle" class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Loading Lesson...</h1>
+            <div class="flex justify-center gap-4">
+                <button id="markCompleteBtn" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg hover:scale-105">
+                    <i class="fas fa-check-circle mr-2"></i> Mark as Completed
+                </button>
+            </div>
+        </div>
+
+        <div id="lessonContainer" class="space-y-10">
+            <div id="objectivesSection" class="hidden bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                <h3 class="text-blue-800 font-extrabold text-xl mb-4 flex items-center gap-2">
+                    <i class="fas fa-bullseye"></i> Learning Objectives
+                </h3>
+                <ul id="objectivesList" class="space-y-3 text-blue-700 font-medium"></ul>
+            </div>
+
+            <div id="vocabSection" class="hidden">
+                <h3 class="text-slate-800 font-extrabold text-xl mb-6 flex items-center gap-2">
+                    <i class="fas fa-language text-blue-600"></i> Key Vocabulary
+                </h3>
+                <div id="vocabGrid" class="grid sm:grid-cols-2 gap-4"></div>
+            </div>
+
+            <div id="lessonContent" class="bg-white p-8 md:p-16 rounded-[3rem] shadow-sm border border-slate-200 prose prose-slate max-w-none"></div>
+
+            <div id="assessmentSection" class="hidden">
+                <div class="brand-gradient text-white p-12 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-extrabold mb-4">Knowledge Check</h3>
+                        <p class="opacity-80 mb-8 text-lg max-w-md mx-auto leading-relaxed">You've completed the reading! Now, prove your mastery with the topic assessment.</p>
+                        <a id="quizLink" href="quiz.html" class="bg-white text-slate-900 px-10 py-4 rounded-full font-extrabold text-lg hover:scale-105 transition inline-block shadow-xl">
+                            Start Quiz <i class="fas fa-pencil-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-20 text-center text-slate-400 text-sm">
+        &copy; 2026 HMG Academy. Part of HMG Concepts Ecosystem.
+    </footer>
+
+    <script src="assets/js/lesson.js"></script>
+</body>
+</html>

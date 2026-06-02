@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMG Academy | The Ultimate Education Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .brand-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        .accent-gradient { background: linear-gradient(90deg, #3b82f6, #2dd4bf); }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .hero-pattern { background-image: radial-gradient(#3b82f6 0.5px, transparent 0.5px); background-size: 24px 24px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <!-- Navigation -->
+    <nav class="glass shadow-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="brand-gradient p-2 rounded-xl text-white shadow-lg">
+                        <img id="brand-logo" src="https://via.placeholder.com/40" alt="HMG Logo" class="w-8 h-8 object-contain">
+                    </div>
+                    <span class="text-xl font-extrabold text-slate-900 tracking-tight">HMG <span class="text-blue-600">ACADEMY</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-semibold text-slate-600">
+                    <a href="index.html" class="text-blue-600">Home</a>
+                    <a href="dashboard.html" class="hover:text-blue-600 transition">Classroom</a>
+                    <a href="library.html" class="hover:text-blue-600 transition">Library</a>
+                    <a href="planner.html" class="hover:text-blue-600 transition">Study Planner</a>
+                    <a href="https://hmgacademy.pages.dev" target="_blank" class="hover:text-blue-600 transition">Main Site</a>
+                </div>
+                <div>
+                    <a href="dashboard.html" class="bg-slate-900 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-600 transition shadow-md">
+                        Start Learning <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden py-24 px-4 brand-gradient text-white hero-pattern">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-bold mb-6 border border-blue-500/30 uppercase tracking-widest">
+                Enterprise Version 4.0: The Scholar's Peak
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tighter">
+                Where Knowledge <br><span class="text-transparent bg-clip-text accent-gradient">Meets Absolute Mastery</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-12 opacity-80 max-w-3xl mx-auto leading-relaxed">
+                The most comprehensive virtual learning environment for JSS 1 - JSS 3. Blending Nigerian and British standards to produce world-class thinkers and problem solvers.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="dashboard.html" class="bg-white text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-2xl">
+                    Enter Classroom <i class="fas fa-graduation-cap ml-2 text-blue-600"></i>
+                </a>
+                <a href="#features" class="border-2 border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">
+                    Our Pedagogy
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Value Props -->
+    <section class="py-12 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <span class="block text-3xl font-extrabold text-slate-900">JSS 1-3</span>
+                <span class="text-slate-500 text-sm uppercase font-bold">Complete Coverage</span>
+            </div>
+            <div>
+                <span class="block text-3xl font-extrabold text-slate-900">Blended</span>
+                <span class="text-slate-500 text-sm uppercase font-bold">Curriculum</span>
+            </div>
+            <div>
+                <span class="block text-3xl font-extrabold text-slate-900">Active</span>
+                <span class="text-slate-500 text-sm uppercase font-bold">Learning Engine</span>
+            </div>
+            <div>
+                <span class="block text-3xl font-extrabold text-slate-900">Zero</span>
+                <span class="text-slate-500 text-sm uppercase font-bold">API Costs</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Enterprise Education Features</h2>
+            <div class="w-24 h-1.5 accent-gradient mx-auto rounded-full"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="group bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 brand-gradient text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:rotate-6 transition">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-slate-800">Active Learning</h3>
+                <p class="text-slate-600 leading-relaxed">Mid-lesson knowledge checks prevent misconceptions from compounding, ensuring a solid foundation before moving forward.</p>
+            </div>
+            <div class="group bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 brand-gradient text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:rotate-6 transition">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-slate-800">Study Planner</h3>
+                <p class="text-slate-600 leading-relaxed">Integrated planning tools allow students to set their own learning pace and track their weekly academic goals.</p>
+            </div>
+            <div class="group bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 brand-gradient text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:rotate-6 transition">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-slate-800">Verified Mastery</h3>
+                <p class="text-slate-600 leading-relaxed">Digital certificates are awarded only upon crossing the mastery threshold, providing a true measure of competence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section class="py-24 bg-slate-900 text-white px-4">
+        <div class="max-w-6xl mx-auto rounded-[3rem] overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 shadow-2xl flex flex-col md:flex-row">
+            <div class="md:w-2/5 brand-gradient p-16 text-center flex flex-col justify-center items-center">
+                <div class="relative">
+                    <img id="founder-photo" src="https://via.placeholder.com/160" alt="Adewale Samson Adeagbo" class="w-40 h-40 rounded-full bg-white/10 mb-8 object-cover border-4 border-white/20 shadow-inner">
+                    <div class="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-green-500 border-4 border-slate-800"></div>
+                </div>
+                <h3 class="text-3xl font-extrabold">Adewale Samson Adeagbo</h3>
+                <p class="text-blue-300 font-semibold mt-2">AI-Augmented Solutions Developer</p>
+            </div>
+            <div class="md:w-3/5 p-16">
+                <h2 class="text-4xl font-bold mb-8 leading-tight">Building the <br><span class="text-blue-400">Gold Standard of EdTech</span></h2>
+                <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
+                    <p>
+                        With 15+ years of classroom experience, I realized that the biggest barrier to learning is not the content, but the <strong>method of delivery</strong>.
+                    </p>
+                    <p>
+                        HMG Academy v4 is an ecosystem designed to eliminate that barrier. By merging <strong>Pedagogical Science</strong> with <strong>Data-Driven Development</strong>, we've created a platform that makes excellence accessible to every student in Nigeria.
+                    </p>
+                    <p class="italic text-blue-400 font-medium">
+                        "Learning Deliberately. Teaching Authentically."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white py-20 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="brand-gradient p-2 rounded-xl text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight">HMG <span class="text-blue-500">ACADEMY</span></span>
+                </div>
+                <p class="text-slate-400 text-lg max-w-md leading-relaxed">
+                    The ultimate virtual institution for Junior Secondary excellence. Part of the HMG Concepts Ecosystem.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">Resources</h4>
+                <ul class="space-y-4 text-slate-400">
+                    <li><a href="dashboard.html" class="hover:text-white transition">Classroom Hub</a></li>
+                    <li><a href="library.html" class="hover:text-white transition">Resource Library</a></li>
+                    <li><a href="planner.html" class="hover:text-white transition">Study Planner</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">Connect</h4>
+                <div class="flex gap-4 text-2xl">
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800 mt-16 pt-8 text-center text-slate-500 text-sm">
+            &copy; 2026 HMG Academy. All Rights Reserved. Designed by Adewale Samson Adeagbo.
+        </div>
+    </footer>
+</body>
+</html>
