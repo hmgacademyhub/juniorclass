@@ -1,0 +1,136 @@
+{
+  "classes": {
+    "jss1": {
+      "name": "JSS 1 / Year 7",
+      "subjects": {
+        "mathematics": {
+          "name": "Mathematics",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {"id": "jss1-math-t1-1", "title": "Number Bases", "description": "Binary, Decimal, and Octal systems; conversion and operations."},
+                {"id": "jss1-math-t1-2", "title": "Fractions & Decimals", "description": "Rational numbers, mixed fractions, and decimal conversions."},
+                {"id": "jss1-math-t1-3", "title": "Factors, Multiples, LCM & HCF", "description": "Prime factorization and finding common divisors/multiples."},
+                {"id": "jss1-math-t1-4", "title": "Integers", "description": "Directed numbers, absolute values, and arithmetic on the number line."}
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {"id": "jss1-math-t2-1", "title": "Algebraic Expressions", "description": "Simplifying expressions, constants, and variables."},
+                {"id": "jss1-math-t2-2", "title": "Linear Equations", "description": "Solving for x in one and two-step equations."},
+                {"id": "jss1-math-t2-3", "title": "Ratios & Proportions", "description": "Sharing quantities and solving proportional problems."}
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {"id": "jss1-math-t3-1", "title": "Plane Geometry", "description": "Angles, triangles, and properties of polygons."},
+                {"id": "jss1-math-t3-2", "title": "Area & Perimeter", "description": "Calculation of boundaries and surface areas for 2D shapes."},
+                {"id": "jss1-math-t3-3", "title": "Introduction to Statistics", "description": "Frequency tables, mean, median, and mode."}
+              ]
+            }
+          }
+        },
+        "computer_science": {
+          "name": "Computer Science",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {"id": "jss1-cs-t1-1", "title": "Foundations of Computing", "description": "The IPO cycle, history, and the 5 generations of computers."},
+                {"id": "jss1-cs-t1-2", "title": "Computer Hardware", "description": "Detailed analysis of Input, Output, Processing, and Storage devices."},
+                {"id": "jss1-cs-t1-3", "title": "Computer Software", "description": "System vs Application software; Operating Systems."}
+              ]
+            },
+            "term2": {
+              "name": "Second Term",
+              "topics": [
+                {"id": "jss1-cs-t2-1", "title": "Digital Literacy", "description": "Operating OS, file management, and basic PC navigation."},
+                {"id": "jss1-cs-t2-2", "title": "Word Processing Mastery", "description": "Professional document creation and formatting."}
+              ]
+            },
+            "term3": {
+              "name": "Third Term",
+              "topics": [
+                {"id": "jss1-cs-t3-1", "title": "ICT in Society", "description": "Impact of tech on health, education, and business."},
+                {"id": "jss1-cs-t3-2", "title": "Digital Ethics & Security", "description": "Privacy, safety, and the ethics of the digital world."}
+              ]
+            }
+          }
+        },
+        "basic_science": {
+          "name": "Basic Science",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {"id": "jss1-sci-t1-1", "title": "Living & Non-Living Things", "description": "Classification of life, biological characteristics, and differences."},
+                {"id": "jss1-sci-t1-2", "title": "The Human Body", "description": "Organ systems, skeletal structure, and overall health."}
+              ]
+            }
+          }
+        }
+      }
+    },
+    "jss2": {
+      "name": "JSS 2 / Year 8",
+      "subjects": {
+        "mathematics": {
+          "name": "Mathematics",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {"id": "jss2-math-t1-1", "title": "Indices & Powers", "description": "Laws of indices and simplification of exponential forms."},
+                {"id": "jss2-math-t1-2", "title": "Standard Form", "description": "Scientific notation for astronomical and microscopic values."}
+              ]
+            }
+          }
+        },
+        "computer_science": {
+          "name": "Computer Science",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {"id": "jss2-cs-t1-1", "title": "Computational Thinking", "description": "Decomposition, Pattern Recognition, Abstraction, and Algorithms."},
+                {"id": "jss2-cs-t1-2", "title": "Logic & Flowcharts", "description": "Designing programs using pseudocode and flowcharts."}
+              ]
+            }
+          }
+        }
+      }
+    },
+    "jss3": {
+      "name": "JSS 3 / Year 9",
+      "subjects": {
+        "mathematics": {
+          "name": "Mathematics",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {"id": "jss3-math-t1-1", "title": "Quadratic Equations", "description": "Solving via factorization, formula, and completing the square."},
+                {"id": "jss3-math-t1-2", "title": "Simultaneous Equations", "description": "Linear systems solving by elimination and substitution."}
+              ]
+            }
+          }
+        },
+        "computer_science": {
+          "name": "Computer Science",
+          "terms": {
+            "term1": {
+              "name": "First Term",
+              "topics": [
+                {"id": "jss3-cs-t1-1", "title": "Intro to Data Science", "description": "The data lifecycle, analysis, and introduction to Machine Learning."},
+                {"id": "jss3-cs-t1-2", "title": "Web Technologies", "description": "HTTP, DNS, HTML5, and the structure of the modern web."}
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
