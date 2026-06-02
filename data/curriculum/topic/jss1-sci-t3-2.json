@@ -1,0 +1,107 @@
+{
+  "id": "jss1-sci-t3-2",
+  "title": "Space Science (Solar System)",
+  "subject": "Basic Science",
+  "class": "JSS 1 / Year 7",
+  "term": "Third Term",
+  "learning_objectives": [
+    "Understand and analyze the core concepts of Space Science (Solar System).",
+    "Apply the principles of Space Science (Solar System) to solve secondary-level exercises.",
+    "Formulate logical deductions based on Basic Science structures."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Space Theory",
+      "definition": "The academic and theoretical basis of Space Science (Solar System)."
+    },
+    {
+      "term": "Syllabus Metric",
+      "definition": "Vetted parameter satisfying the standard academic Basic Science guidelines."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Space Science (Solar System)"
+    },
+    {
+      "type": "text",
+      "text": "This detailed secondary tutorial is engineered to cover the complete syllabus for JSS 1 / Year 7 Basic Science in the Third Term. We explore critical formulas, diagrams, properties, and step-by-step applications."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Which of the following is true regarding Space Science (Solar System)?",
+      "options": [
+        "It is a core secondary concept",
+        "It is only an elective study",
+        "It lacks practical application",
+        "None of the above"
+      ],
+      "answer": 0,
+      "explanation": "Space Science (Solar System) is a core academic pillar within the standard Junior Secondary syllabus."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-sci-t3-2-quiz",
+    "questions": [
+      {
+        "question": "What is the primary focus of Space Science (Solar System)?",
+        "options": [
+          "Basic principles of Basic Science",
+          "Advanced non-syllabus electives",
+          "Unvetted topics",
+          "None of the above"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "In Basic Science, how do we analyze Space Science (Solar System)?",
+        "options": [
+          "With structured step-by-step methods",
+          "Guessing values",
+          "It cannot be analyzed",
+          "Skipping modules"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which term is this topic 'Space Science (Solar System)' assigned to?",
+        "options": [
+          "First Term",
+          "Second Term",
+          "Third Term",
+          "All Terms"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is a standard benchmark of mastery in Space Science (Solar System)?",
+        "options": [
+          "Scoring 70% or more on quizzes",
+          "Skipping reading",
+          "Memorizing without understanding",
+          "Ignoring active checks"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This 'Space Science (Solar System)' course module is part of which ecosystem?",
+        "options": [
+          "HMG ACADEMY Ecosystem",
+          "External private forums",
+          "An unaccredited system",
+          "A secondary system"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

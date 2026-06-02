@@ -1,0 +1,112 @@
+{
+  "id": "jss1-math-t1-1",
+  "title": "Number Bases",
+  "subject": "Mathematics",
+  "class": "JSS 1 / Year 7",
+  "term": "First Term",
+  "learning_objectives": [
+    "Explain the difference between decimal (base 10) and binary (base 2).",
+    "Perform conversions between decimal and binary numbers.",
+    "Explain the place values in base 10 and base 2.",
+    "Illustrate how binary represents on/off signals in computing switches."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Base",
+      "definition": "The number of digits in a system (e.g. base 10 uses 0-9)."
+    },
+    {
+      "term": "Binary",
+      "definition": "Base 2 number system containing only 0 and 1."
+    },
+    {
+      "term": "Place Value",
+      "definition": "The value of a digit depending on its column position."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Number Bases"
+    },
+    {
+      "type": "text",
+      "text": "All standard human computations rely on Base 10 (decimal), but computers operate using binary circuits. This lesson reviews how numbers are scaled using powers of the base."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "What is the decimal equivalent of the binary number 1101?",
+      "options": [
+        "10",
+        "13",
+        "11",
+        "15"
+      ],
+      "answer": 1,
+      "explanation": "1101_2 = (1*8) + (1*4) + (0*2) + (1*1) = 8 + 4 + 0 + 1 = 13."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-math-t1-1-quiz",
+    "questions": [
+      {
+        "question": "How many digits are in base 8 (octal)?",
+        "options": [
+          "2",
+          "8",
+          "10",
+          "16"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Convert the decimal number 8 into binary.",
+        "options": [
+          "1000",
+          "1001",
+          "1010",
+          "1111"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Convert the binary number 101 to decimal.",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In binary addition, what is 1 + 1 equal to?",
+        "options": [
+          "2",
+          "10",
+          "11",
+          "0"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which digits are valid in a base 2 system?",
+        "options": [
+          "0, 1, 2",
+          "0, 1",
+          "1, 2",
+          "All digits"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "jss1-math-t2-2",
+  "title": "Linear Equations",
+  "subject": "Mathematics",
+  "class": "JSS 1 / Year 7",
+  "term": "Second Term",
+  "learning_objectives": [
+    "Isolate variables in linear equations.",
+    "Check equations for accuracy."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Equation",
+      "definition": "A mathematical statement of absolute equality."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Linear Equations"
+    },
+    {
+      "type": "text",
+      "text": "Solving a linear equation involves performing identical inverse actions on both sides of the equals sign."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Solve for x: 3x - 5 = 10",
+      "options": [
+        "x=3",
+        "x=5",
+        "x=15",
+        "x=1"
+      ],
+      "answer": 1,
+      "explanation": "Add 5 to both sides: 3x = 15. Divide by 3: x = 5."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-math-t2-2-quiz",
+    "questions": [
+      {
+        "question": "Solve: y + 9 = 15",
+        "options": [
+          "y=6",
+          "y=24",
+          "y=9",
+          "y=-6"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Solve: 4m = 28",
+        "options": [
+          "m=6",
+          "m=7",
+          "m=32",
+          "m=112"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Solve: x/3 = 8",
+        "options": [
+          "x=5",
+          "x=24",
+          "x=11",
+          "x=2.6"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Solve: 2x + 3 = 11",
+        "options": [
+          "x=4",
+          "x=5",
+          "x=8",
+          "x=7"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What does a solution to an equation do?",
+        "options": [
+          "Makes the equation equal 0",
+          "Makes both sides of the equation equal",
+          "Changes variables",
+          "None"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

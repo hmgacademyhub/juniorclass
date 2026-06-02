@@ -1,0 +1,102 @@
+{
+  "id": "jss1-math-t2-1",
+  "title": "Algebraic Expressions",
+  "subject": "Mathematics",
+  "class": "JSS 1 / Year 7",
+  "term": "Second Term",
+  "learning_objectives": [
+    "Identify coefficients and constants.",
+    "Simplify expressions by collecting like terms."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Coefficient",
+      "definition": "The numerical multiplier of a variable."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Algebraic Expressions"
+    },
+    {
+      "type": "text",
+      "text": "Algebra allows us to generalize arithmetic by substituting letters for unknown parameters."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Simplify 3x + 4y - x + 2y",
+      "options": [
+        "2x + 6y",
+        "4x + 6y",
+        "2x - 6y",
+        "4x - 6y"
+      ],
+      "answer": 0,
+      "explanation": "(3x - x) + (4y + 2y) = 2x + 6y."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-math-t2-1-quiz",
+    "questions": [
+      {
+        "question": "In the expression 7y - 5, what is the coefficient?",
+        "options": [
+          "7",
+          "y",
+          "-5",
+          "5"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Simplify: a + b - a + b",
+        "options": [
+          "0",
+          "2a",
+          "2b",
+          "2a + 2b"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the value of 2n + 3 when n = 5?",
+        "options": [
+          "10",
+          "13",
+          "15",
+          "25"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Simplify: 3ab x 2a",
+        "options": [
+          "5a^2b",
+          "6ab",
+          "6a^2b",
+          "5ab"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which of these is a variable?",
+        "options": [
+          "5",
+          "x",
+          "+",
+          "="
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

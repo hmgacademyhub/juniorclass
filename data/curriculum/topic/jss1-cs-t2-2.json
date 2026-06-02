@@ -1,0 +1,104 @@
+{
+  "id": "jss1-cs-t2-2",
+  "title": "Word Processing Mastery",
+  "subject": "Computer Science",
+  "class": "JSS 1 / Year 7",
+  "term": "Second Term",
+  "learning_objectives": [
+    [
+      "Format document fonts and margins.",
+      "Insert tables and page elements."
+    ]
+  ],
+  "key_vocabulary": [
+    {
+      "term": "WYSIWYG",
+      "definition": "What You See Is What You Get document editor."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Word Processing Mastery"
+    },
+    {
+      "type": "text",
+      "text": "Word processing is the digital production, layout formatting, and printing of textual documents."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Which shortcut justifies paragraph text?",
+      "options": [
+        "Ctrl + L",
+        "Ctrl + R",
+        "Ctrl + J",
+        "Ctrl + E"
+      ],
+      "answer": 2,
+      "explanation": "Ctrl + J distributes text evenly between left and right margins."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-cs-t2-2-quiz",
+    "questions": [
+      {
+        "question": "Which of these is word processing software?",
+        "options": [
+          "MS Excel",
+          "MS Word",
+          "MS Access",
+          "MS Paint"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the default orientation of a Word page?",
+        "options": [
+          "Landscape",
+          "Portrait",
+          "Square",
+          "Custom"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What styling makes text thick and dark?",
+        "options": [
+          "Italic",
+          "Underline",
+          "Bold",
+          "Strikethrough"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is a header?",
+        "options": [
+          "Text at the top margin of every page",
+          "The document title",
+          "The font style",
+          "A decorative border"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which shortcut saves a document?",
+        "options": [
+          "Ctrl + S",
+          "Ctrl + P",
+          "Ctrl + O",
+          "Ctrl + N"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

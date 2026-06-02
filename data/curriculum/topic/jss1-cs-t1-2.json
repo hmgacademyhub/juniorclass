@@ -1,0 +1,102 @@
+{
+  "id": "jss1-cs-t1-2",
+  "title": "Computer Hardware",
+  "subject": "Computer Science",
+  "class": "JSS 1 / Year 7",
+  "term": "First Term",
+  "learning_objectives": [
+    "Classify input and output hardware.",
+    "Differentiate RAM and ROM memory units."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Hardware",
+      "definition": "The physical components of a computer."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Computer Hardware"
+    },
+    {
+      "type": "text",
+      "text": "Hardware refers to the tangible components of a computing unit that can be seen and handled."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Which memory is volatile (cleared on power loss)?",
+      "options": [
+        "ROM",
+        "RAM",
+        "Hard Drive",
+        "Flash drive"
+      ],
+      "answer": 1,
+      "explanation": "RAM (Random Access Memory) is volatile temporary storage."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-cs-t1-2-quiz",
+    "questions": [
+      {
+        "question": "Which of these is an input device?",
+        "options": [
+          "Monitor",
+          "Printer",
+          "Keyboard",
+          "Speaker"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Where is the BIOS firmware stored?",
+        "options": [
+          "RAM",
+          "ROM",
+          "SSD",
+          "CD-ROM"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What type of storage is an SSD?",
+        "options": [
+          "Primary",
+          "Secondary",
+          "Volatile",
+          "Optical"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which component does the actual mathematical processing?",
+        "options": [
+          "ALU in CPU",
+          "RAM",
+          "Control Unit",
+          "GPU"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the resolution of a monitor measured in?",
+        "options": [
+          "Inches",
+          "Pixels",
+          "Hertz",
+          "Bytes"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

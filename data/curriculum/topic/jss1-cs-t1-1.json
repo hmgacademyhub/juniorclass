@@ -2,114 +2,100 @@
   "id": "jss1-cs-t1-1",
   "title": "Foundations of Computing",
   "subject": "Computer Science",
-  "class": "JSS 1",
+  "class": "JSS 1 / Year 7",
   "term": "First Term",
   "learning_objectives": [
-    "Critically define a computer and distinguish it from a simple calculator.",
-    "Illustrate and apply the IPO (Input-Process-Output) cycle to real-world scenarios.",
-    "Evaluate the shift in technology across the five generations of computers.",
-    "Contrast computer processing capabilities with human cognitive processing."
+    "Define a computer.",
+    "Explain the IPO cycle.",
+    "Analyze historical computer generations."
   ],
   "key_vocabulary": [
-    {"term": "Data", "definition": "Raw, unprocessed facts and figures (e.g., a list of numbers)."},
-    {"term": "Information", "definition": "Data that has been processed and organized to be meaningful (e.g., a grade report)."},
-    {"term": "Algorithm", "definition": "A finite set of unambiguous instructions to solve a specific problem."},
-    {"term": "CPU", "definition": "The Central Processing Unit; the 'brain' of the computer where processing occurs."}
+    {
+      "term": "IPO Cycle",
+      "definition": "Input, Process, Output framework of computation."
+    }
   ],
   "content": [
     {
       "type": "heading",
-      "text": "1. The Essence of Computing"
+      "text": "1. The Core Essence of Foundations of Computing"
     },
     {
       "type": "text",
-      "text": "A computer is an electronic device that accepts raw data as input, processes it according to a set of predefined instructions (software), and produces meaningful information as output. While we often think of 'computers' as laptops, the concept extends to embedded systems in cars, watches, and industrial robots."
+      "text": "Computers are machines that accept raw data (input), process it, and output meaningful information."
     },
     {
       "type": "info-box",
-      "text": "Pro Tip: The magic of computing isn't in the hardware, but in the 'Programmability'. A computer is a general-purpose tool that can become a typewriter, a calculator, or a gaming console depending on the software it runs."
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
     },
     {
       "type": "heading",
-      "text": "2. The IPO Cycle: The Universal Logic"
-    },
-    {
-      "type": "text",
-      "text": "Every computational task, no matter how complex, follows the Input-Process-Output cycle. This is the fundamental logic of all digital systems."
-    },
-    {
-      "type": "list",
-      "items": [
-        "Input: Capturing raw data. Examples: Typing 'Hello' on a keyboard, speaking into a microphone, or a sensor detecting temperature.",
-        "Process: Transforming data. Examples: Sorting a list of names alphabetically, adding two numbers, or compressing a photo.",
-        "Output: Delivering information. Examples: Displaying text on a screen, printing a document, or playing a sound."
-      ]
+      "text": "2. Guided Practical Check"
     },
     {
       "type": "knowledge-check",
-      "question": "Scenario: A smart thermostat detects the room is too cold and turns on the heater. What is the 'Input' in this IPO cycle?",
-      "options": ["The heater turning on", "The room getting warmer", "The temperature sensor reading", "The electricity powering the device"],
+      "question": "In the IPO cycle, a printer is an example of what?",
+      "options": [
+        "Input",
+        "Process",
+        "Output",
+        "Storage"
+      ],
       "answer": 2,
-      "explanation": "The input is the raw data. The sensor reading the current temperature is the starting point of the process."
-    },
-    {
-      "type": "heading",
-      "text": "3. The Evolution of Machines (Generations)"
-    },
-    {
-      "type": "text",
-      "text": "Computing has evolved through five distinct technological eras, each reducing size and increasing speed."
-    },
-    {
-      "type": "table",
-      "headers": ["Generation", "Core Tech", "Main Characteristic", "Era"],
-      "rows": [
-        ["1st", "Vacuum Tubes", "Huge, high heat, machine language", "1940-1956"],
-        ["2nd", "Transistors", "Smaller, faster, assembly language", "1956-1963"],
-        ["3rd", "Integrated Circuits", "Introduction of OS, keyboards, monitors", "1964-1971"],
-        ["4th", "Microprocessors", "Personal computers, VLSI, handhelds", "1971-Present"],
-        ["5th", "AI & Quantum", "Neural networks, Voice recognition, Logic", "Future"]
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "4. Blended Curriculum Synthesis"
-    },
-    {
-      "type": "text",
-      "text": "The Nigerian curriculum emphasizes the technical components and historical milestones. The British (Year 7) curriculum focuses on 'Computational Thinking'—the ability to decompose problems and think algorithmically. By combining both, we create scholars who not only know how the machine works but can tell the machine exactly what to do."
-    },
-    {
-      "type": "info-box",
-      "text": "Critical Thinking: Consider the 5th generation. If a computer can 'learn' (AI), does it still follow the IPO cycle, or is it creating its own process? This is the frontier of modern computer science."
+      "explanation": "A printer outputs physical paper copies of information."
     }
   ],
   "assessment": {
     "quizId": "jss1-cs-t1-1-quiz",
     "questions": [
       {
-        "question": "What is the fundamental difference between Data and Information?",
-        "options": ["Information is raw; Data is processed", "Data is raw; Information is processed", "They are identical", "Data is only numbers; Information is only text"],
+        "question": "What is the brain of the computer?",
+        "options": [
+          "RAM",
+          "Monitor",
+          "CPU",
+          "Hard Drive"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which generation used vacuum tubes?",
+        "options": [
+          "First",
+          "Second",
+          "Third",
+          "Fourth"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Raw unprocessed facts and figures are called:",
+        "options": [
+          "Information",
+          "Data",
+          "Programs",
+          "Databases"
+        ],
         "answer": 1
       },
       {
-        "question": "In the IPO cycle, 'Saving a file to a hard drive' is an example of what?",
-        "options": ["Input", "Process", "Output", "None of the above"],
-        "answer": 2
+        "question": "What does GIGO stand for?",
+        "options": [
+          "Good Input Good Output",
+          "Garbage In Garbage Out",
+          "General Input Process Output",
+          "Gigabyte Input Gigabyte Output"
+        ],
+        "answer": 1
       },
       {
-        "question": "Which generation of computers first utilized Integrated Circuits (ICs)?",
-        "options": ["First", "Second", "Third", "Fourth"],
-        "answer": 2
-      },
-      {
-        "question": "The 'GIGO' (Garbage In, Garbage Out) principle primarily describes which computer trait?",
-        "options": ["Speed", "Storage", "Accuracy", "Diligence"],
-        "answer": 2
-      },
-      {
-        "question": "Which of these best describes the 4th Generation of computers?",
-        "options": ["Use of Vacuum Tubes", "Use of Microprocessors", "Use of AI only", "Huge size and high heat"],
+        "question": "Which of these is system software?",
+        "options": [
+          "MS Word",
+          "Operating System",
+          "Web Browser",
+          "WhatsApp"
+        ],
         "answer": 1
       }
     ]

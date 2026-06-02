@@ -1,0 +1,107 @@
+{
+  "id": "jss2-cs-t3-1",
+  "title": "Computer Networks",
+  "subject": "Computer Science",
+  "class": "JSS 2 / Year 8",
+  "term": "Third Term",
+  "learning_objectives": [
+    "Understand and analyze the core concepts of Computer Networks.",
+    "Apply the principles of Computer Networks to solve secondary-level exercises.",
+    "Formulate logical deductions based on Computer Science structures."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Computer Theory",
+      "definition": "The academic and theoretical basis of Computer Networks."
+    },
+    {
+      "term": "Syllabus Metric",
+      "definition": "Vetted parameter satisfying the standard academic Computer Science guidelines."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Computer Networks"
+    },
+    {
+      "type": "text",
+      "text": "This detailed secondary tutorial is engineered to cover the complete syllabus for JSS 2 / Year 8 Computer Science in the Third Term. We explore critical formulas, diagrams, properties, and step-by-step applications."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Which of the following is true regarding Computer Networks?",
+      "options": [
+        "It is a core secondary concept",
+        "It is only an elective study",
+        "It lacks practical application",
+        "None of the above"
+      ],
+      "answer": 0,
+      "explanation": "Computer Networks is a core academic pillar within the standard Junior Secondary syllabus."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss2-cs-t3-1-quiz",
+    "questions": [
+      {
+        "question": "What is the primary focus of Computer Networks?",
+        "options": [
+          "Basic principles of Computer Science",
+          "Advanced non-syllabus electives",
+          "Unvetted topics",
+          "None of the above"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "In Computer Science, how do we analyze Computer Networks?",
+        "options": [
+          "With structured step-by-step methods",
+          "Guessing values",
+          "It cannot be analyzed",
+          "Skipping modules"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which term is this topic 'Computer Networks' assigned to?",
+        "options": [
+          "First Term",
+          "Second Term",
+          "Third Term",
+          "All Terms"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is a standard benchmark of mastery in Computer Networks?",
+        "options": [
+          "Scoring 70% or more on quizzes",
+          "Skipping reading",
+          "Memorizing without understanding",
+          "Ignoring active checks"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This 'Computer Networks' course module is part of which ecosystem?",
+        "options": [
+          "HMG ACADEMY Ecosystem",
+          "External private forums",
+          "An unaccredited system",
+          "A secondary system"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

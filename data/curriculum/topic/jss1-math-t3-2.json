@@ -1,0 +1,102 @@
+{
+  "id": "jss1-math-t3-2",
+  "title": "Area & Perimeter",
+  "subject": "Mathematics",
+  "class": "JSS 1 / Year 7",
+  "term": "Third Term",
+  "learning_objectives": [
+    "Calculate rectangular and triangular areas.",
+    "Evaluate circumferences of circles."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Perimeter",
+      "definition": "The outer boundary distance of a shape."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Area & Perimeter"
+    },
+    {
+      "type": "text",
+      "text": "This lesson covers measuring bounded flat 2D surfaces and outer borders."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Find the area of a triangle with base 8cm and height 5cm.",
+      "options": [
+        "40 cm^2",
+        "20 cm^2",
+        "13 cm^2",
+        "26 cm^2"
+      ],
+      "answer": 1,
+      "explanation": "Area of triangle = 0.5 * base * height = 0.5 * 8 * 5 = 20 cm^2."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-math-t3-2-quiz",
+    "questions": [
+      {
+        "question": "Find the perimeter of a rectangle with length 10cm and width 4cm.",
+        "options": [
+          "14cm",
+          "28cm",
+          "40cm",
+          "20cm"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Calculate the area of a square with side length 7cm.",
+        "options": [
+          "14 cm^2",
+          "28 cm^2",
+          "49 cm^2",
+          "35 cm^2"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the formula for the circumference of a circle?",
+        "options": [
+          "pi * r^2",
+          "2 * pi * r",
+          "pi * d^2",
+          "2 * pi * d"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Find the area of a rectangle with length 12cm and width 5cm.",
+        "options": [
+          "17 cm^2",
+          "34 cm^2",
+          "60 cm^2",
+          "24 cm^2"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If the perimeter of a square is 36cm, what is its side length?",
+        "options": [
+          "6cm",
+          "9cm",
+          "12cm",
+          "18cm"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

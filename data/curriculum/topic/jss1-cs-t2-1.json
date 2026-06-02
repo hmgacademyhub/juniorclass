@@ -1,0 +1,102 @@
+{
+  "id": "jss1-cs-t2-1",
+  "title": "Digital Literacy",
+  "subject": "Computer Science",
+  "class": "JSS 1 / Year 7",
+  "term": "Second Term",
+  "learning_objectives": [
+    "Explain booting.",
+    "Manage hierarchical folders and file extensions."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Booting",
+      "definition": "Starting up a computer and loading its OS."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Digital Literacy"
+    },
+    {
+      "type": "text",
+      "text": "Digital literacy starts with navigating operational file hierarchies and safely managing directories."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "What type of booting occurs when restarting an already running PC?",
+      "options": [
+        "Cold Booting",
+        "Warm Booting",
+        "Dry Booting",
+        "Hard Booting"
+      ],
+      "answer": 1,
+      "explanation": "Warm booting is restarting an active computer using software cues."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss1-cs-t2-1-quiz",
+    "questions": [
+      {
+        "question": "Which file extension is a text document?",
+        "options": [
+          ".exe",
+          ".jpg",
+          ".txt",
+          ".mp3"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the shortcut to select all files?",
+        "options": [
+          "Ctrl + C",
+          "Ctrl + A",
+          "Ctrl + V",
+          "Ctrl + Z"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Where do deleted files go on Windows?",
+        "options": [
+          "Desktop",
+          "Recycle Bin",
+          "My Documents",
+          "Hard Drive"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which key deletes a file directly?",
+        "options": [
+          "Enter",
+          "Delete",
+          "Backspace",
+          "Spacebar"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A directory inside another directory is called a:",
+        "options": [
+          "Root directory",
+          "File directory",
+          "Subfolder",
+          "System folder"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

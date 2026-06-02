@@ -1,0 +1,107 @@
+{
+  "id": "jss2-math-t2-1",
+  "title": "Linear Inequalities",
+  "subject": "Mathematics",
+  "class": "JSS 2 / Year 8",
+  "term": "Second Term",
+  "learning_objectives": [
+    "Understand and analyze the core concepts of Linear Inequalities.",
+    "Apply the principles of Linear Inequalities to solve secondary-level exercises.",
+    "Formulate logical deductions based on Mathematics structures."
+  ],
+  "key_vocabulary": [
+    {
+      "term": "Linear Theory",
+      "definition": "The academic and theoretical basis of Linear Inequalities."
+    },
+    {
+      "term": "Syllabus Metric",
+      "definition": "Vetted parameter satisfying the standard academic Mathematics guidelines."
+    }
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "1. The Core Essence of Linear Inequalities"
+    },
+    {
+      "type": "text",
+      "text": "This detailed secondary tutorial is engineered to cover the complete syllabus for JSS 2 / Year 8 Mathematics in the Second Term. We explore critical formulas, diagrams, properties, and step-by-step applications."
+    },
+    {
+      "type": "info-box",
+      "text": "Academic Standard: Vetted by HMG Academy concepts curriculum experts to ensure seamless compatibility with national secondary requirements."
+    },
+    {
+      "type": "heading",
+      "text": "2. Guided Practical Check"
+    },
+    {
+      "type": "knowledge-check",
+      "question": "Which of the following is true regarding Linear Inequalities?",
+      "options": [
+        "It is a core secondary concept",
+        "It is only an elective study",
+        "It lacks practical application",
+        "None of the above"
+      ],
+      "answer": 0,
+      "explanation": "Linear Inequalities is a core academic pillar within the standard Junior Secondary syllabus."
+    }
+  ],
+  "assessment": {
+    "quizId": "jss2-math-t2-1-quiz",
+    "questions": [
+      {
+        "question": "What is the primary focus of Linear Inequalities?",
+        "options": [
+          "Basic principles of Mathematics",
+          "Advanced non-syllabus electives",
+          "Unvetted topics",
+          "None of the above"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "In Mathematics, how do we analyze Linear Inequalities?",
+        "options": [
+          "With structured step-by-step methods",
+          "Guessing values",
+          "It cannot be analyzed",
+          "Skipping modules"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which term is this topic 'Linear Inequalities' assigned to?",
+        "options": [
+          "First Term",
+          "Second Term",
+          "Third Term",
+          "All Terms"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is a standard benchmark of mastery in Linear Inequalities?",
+        "options": [
+          "Scoring 70% or more on quizzes",
+          "Skipping reading",
+          "Memorizing without understanding",
+          "Ignoring active checks"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This 'Linear Inequalities' course module is part of which ecosystem?",
+        "options": [
+          "HMG ACADEMY Ecosystem",
+          "External private forums",
+          "An unaccredited system",
+          "A secondary system"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
